@@ -14,10 +14,8 @@ app.use(cors())
 app.use(express.json())
 
 // Default
-app.get('/', (req, res) => {
-    res.json('Hello to my app')
-})
 
+app.get('/', (req, res) => { res.send('Hello from Express!')})
 // Sign up to the Database
 app.post('/signup', async (req, res) => {
     const client = new MongoClient(uri)
